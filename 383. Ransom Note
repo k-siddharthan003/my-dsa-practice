@@ -1,0 +1,10 @@
+class Solution:
+    def canConstruct(self, ransomNote: str, magazine: str) -> bool:
+        magazinelist = list(magazine)
+        
+        for char in ransomNote :
+            if char in magazinelist :
+                magazinelist.remove(char)
+            else :
+                return False
+        return True
